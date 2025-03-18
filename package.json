@@ -2,9 +2,12 @@
   "scripts": {
     "start": "nodemon app.js",
     "start:prod": "node app.js",
-    "build": "npm install --production && npm run lint",
+    "build": "npm install && npm run lint",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
