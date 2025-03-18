@@ -10,10 +10,16 @@ const openai = new OpenAI({
 exports.getTaskSuggestions = async (req, res) => {
   try {
     const currentTime = new Date().toISOString();
-    const prompt = `Generate 5 different developer tasks (${currentTime}). Return only plain tasks, one per line, without any numbers or bullet points. Each task should be 3-4 words, focusing on common programming tasks. Example format:
-Update API documentation
-Fix database queries
-Implement user authentication`;
+    const prompt = `Generate 5 different tasks (${currentTime}). Return only plain tasks, one per line, without any numbers or bullet points. Each task should be 3-4 words, focusing on various tech-related activities like:
+Review system architecture
+Write technical documentation
+Conduct security audit
+Plan sprint activities
+Schedule team meeting
+Research cloud solutions
+Mentor junior developers
+Update design mockups
+Create project roadmap`;
 
     const completion = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
