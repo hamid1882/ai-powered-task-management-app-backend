@@ -6,12 +6,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? ['https://task-management-ai.netlify.app', 'https://task-management-ai.vercel.app', 'https://task-management-frontend-ten-sigma.vercel.app', 'https://hafeez-ai-task-management.netlify.app']
-    : 'http://localhost:5173',
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key']
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Add OPTIONS handling for preflight requests
