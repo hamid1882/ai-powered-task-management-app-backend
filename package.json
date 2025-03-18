@@ -3,6 +3,7 @@
     "start": "nodemon app.js",
     "start:prod": "node app.js",
     "build": "npm install",
+    "postinstall": "mkdir -p public && echo '{}' > public/package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
