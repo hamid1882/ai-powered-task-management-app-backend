@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://task-management-ai.netlify.app', 'https://task-management-ai.vercel.app']
+    ? ['https://task-management-ai.netlify.app', 'https://task-management-ai.vercel.app', 'https://task-management-frontend-ten-sigma.vercel.app', 'https://hafeez-ai-task-management.netlify.app']
     : 'http://localhost:5173',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
